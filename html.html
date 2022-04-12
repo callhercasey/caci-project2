@@ -1,0 +1,59 @@
+/* <div class="container">
+    <h1>Tip Calculator</h1>
+        <P>Bill Amount</P>
+        <input id="bill"type="text"
+        placeholder="Amount To Be Paid"></p>
+        <P>How was the service?</P>
+        <select id="service">
+            <option selected disabled hidden>
+            Select
+            <option value="0.25">25% - Top Notch</option>
+            <option value="0.20">20% - Excellent</option>
+            <option value="0.15">15% - Good</option>
+            <option value="0.10">10% - Bad</option>
+        </select>
+
+        <p>Total Number of Persons</p>
+        <input id="people" type="text" placeholder="Number of People">
+    
+    <button type="button" id="btnClick">Calculate</button>
+</div>
+
+<div id="totaltip">
+    <sup>$</sup><span id="tip">0.00</span>
+    <small id="each">Each</small>
+</div> 
+<script>
+    function Calculate() {
+  var bill = document.getElementById("bill").value;
+  var service = document.getElementById("service").value;
+  var people = document.getElementById("people").value;
+
+  if ((bill === "") | (service === 0)) {
+    alert("Please enter value");
+    return;
+  }
+
+  if (people === "" || people <= 0) {
+    people = 1;
+
+    document.getElementById("each").style.display = "none";
+  } else {
+    document.getElementById("each").style.display = "block";
+  }
+  var total = (bill * service) / people;
+
+  total = Math.round(total * 100) / 100;
+
+  total = total.toFixed(2);
+
+  document.getElementById("totaltip").style.display = "block";
+  document.getElementById("tip").innerHTML = total;
+}
+document.getElementById("totaltip").style.display = "none";
+document.getElementById("each").style.display = "none";
+
+document.getElementById("btnClick").onclick = function () {
+  Calculate();
+};
+</script>

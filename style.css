@@ -1,6 +1,6 @@
 body{
     font-family: serif;
-    background: green;
+    background-color: green;
 }
 
 #container{
@@ -21,7 +21,7 @@ h1{
     text-transform: uppercase;
 }
 
-p{
+body{
     padding-left: 20px;
     font-size: 16px;
 }
