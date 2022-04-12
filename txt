@@ -1,4 +1,0 @@
-function Calculate() {
-  var bill = document.getElementById("bill").value;
-  var service = document.getElementById("service").value;
-  var people = document.getElementById("people").value;
