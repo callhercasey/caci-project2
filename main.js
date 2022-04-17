@@ -58,4 +58,29 @@ const updateCalculator = () => {
 
 }
 
+const options = {
+	method: 'GET',
+	headers: {
+		accept: 'application/json',
+		'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com',
+		'X-RapidAPI-Key': '9c1b8bbd41mshfd023a24cc25282p1933d8jsn51bb237be6a6'
+	}
+};
+
+
+
+
+fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
+  .then(response => response.json())
+  .then(response => {
+      console.log("Chuck Norris API object:");
+      console.log(response);
+     
+      document.getElementById('joke').innerHTML = response.value;
+    
+  })
+  .catch(err => {
+      console.log(err);
+  });
+
 

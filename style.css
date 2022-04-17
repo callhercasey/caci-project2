@@ -1,6 +1,6 @@
-body{
+div{
     font-family: serif;
-    background-color: green;
+    background-color: white;
 }
 
 #container{
@@ -21,10 +21,7 @@ h1{
     text-transform: uppercase;
 }
 
-body{
-    padding-left: 20px;
-    font-size: 16px;
-}
+
 input{
     padding: 10px;
 }
@@ -87,3 +84,4 @@ button{
     font-weight: bold;
     display: block;
 }
+
