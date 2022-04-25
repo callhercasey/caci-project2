@@ -6,7 +6,7 @@ await fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/rand
 	headers: {
 		accept: 'application/json',
 		'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com',
-		'X-RapidAPI-Key': 'd39305c392msh566473edc061e83p1d26cejsn89a34e411147'
+		'X-RapidAPI-Key': 
 	}
 })
   .then(response => response.json())
